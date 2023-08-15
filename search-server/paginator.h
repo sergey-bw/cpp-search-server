@@ -64,3 +64,11 @@ template <typename Container>
 auto Paginate(const Container& c, size_t page_size) {
     return Paginator(begin(c), end(c), page_size);
 }
+
+template <typename Iterator>
+std::ostream& operator<<(std::ostream& output, IteratorRange<Iterator> range) {
+    for (auto it = range.begin(); it != range.end(); ++it) {
+        output << *it; // *it - Document
+    }
+    return output;
+}
