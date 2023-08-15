@@ -29,12 +29,6 @@ private:
 
     const SearchServer& search_server_;
     std::deque<QueryResult> requests_;
-    /*
-        Как правильно? в заголовочном файле
-        сразу определять переменные (свойства)?
-        Или как методы, объявлять в заголовочной файле,
-        а определять в реализации?
-    */
     const static int min_in_day_ = 1440;
     int count_query_not_result_ = 0;
     uint64_t current_time_ = 0;
